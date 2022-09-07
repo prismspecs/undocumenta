@@ -28,7 +28,7 @@
         },
         rules: [
           Bindery.RunningHeader(),
-          Bindery.PageBreak({ selector: 'h1, h2', position: 'before' }),
+          Bindery.PageBreak({ selector: 'h1, h2', position: 'before', continue: 'right' }),
           // was Bindery.PageBreak({ selector: 'h1, h2', position: 'before', continue: 'left' }),
           Bindery.PageBreak({ selector: '.tootall', position: 'avoid' }),
           Bindery.PageBreak({ selector: '.regular', position: 'avoid' }),
