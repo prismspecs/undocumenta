@@ -1,0 +1,92 @@
+* {
+    font: inherit;
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    font: 20px/1.2 serif;
+}
+
+body {
+    margin: 0;
+}
+
+h1 {
+    font-size: 3rem;
+}
+
+h2 {
+    font-size: 2rem;
+    line-height: 2.4rem;
+    margin-bottom: 4.8rem;
+}
+
+sup {
+    font-size: 0.7rem;
+}
+
+.content, .intro {
+    margin: 20px auto;
+    max-width: 900px;
+    padding: 20px;
+}
+
+p {
+    text-indent: 1rem;
+    /* font-size:.75rem; */
+}
+
+figure {
+    margin: 0;
+    background: gray;
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.med-figure {
+    background: blue;
+}
+
+.big-figure {
+    background: green;
+}
+
+figure img {
+    height: 100%;
+    width: 100%;
+    /* object-fit: cover; */
+}
+
+figcaption {
+    padding: 32pt;
+    color: white;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    text-shadow: 0px 0px 5px black;
+}
+
+.aside {
+    background: #ffffcc;
+    border: 1px solid black;
+    padding: 1rem;
+    margin: 1rem 0;
+}
+
+.tootall {
+    height: 550px;
+}
+
+.toowide {
+    width: 550px;
+}
+
+.regular {
+    height:unset;
+}
+.italic {
+    font-style: italic;
+}

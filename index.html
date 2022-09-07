@@ -1,0 +1,53 @@
+---
+---
+
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Spreads and Images</title>
+  <link rel="stylesheet" type="text/css" href="style.css" />
+  <script type="text/javascript" src='bindery.min.js'></script>
+</head>
+
+<body>
+  <script>
+      Bindery.makeBook({
+        content: {
+          url: './content.html',
+          selector: ".content",
+        },
+        pageSetup: {
+          // size: { width: '8.25in', height: '11.75in' },
+          size: { width: '4.125in', height: '5.875in' },
+        },
+        printSetup: {
+          bleed: '0.25in',
+        },
+        rules: [
+          Bindery.RunningHeader(),
+          Bindery.PageBreak({ selector: 'h1, h2', position: 'before' }),
+          // was Bindery.PageBreak({ selector: 'h1, h2', position: 'before', continue: 'left' }),
+          Bindery.PageBreak({ selector: '.tootall', position: 'avoid' }),
+          Bindery.PageBreak({ selector: '.regular', position: 'avoid' }),
+          
+
+          Bindery.FullBleedPage({ selector: '.fullpage', continue: 'next' }),
+          Bindery.FullBleedPage({ selector: '.inward', continue: 'next', rotate: 'inward' }),
+          Bindery.FullBleedPage({ selector: '.outward', continue: 'next', rotate: 'outward' }),
+          Bindery.FullBleedPage({ selector: '.full-clockwise', continue: 'next', rotate: 'clockwise' }),
+          Bindery.FullBleedPage({ selector: '.full-counterclockwise', continue: 'next', rotate: 'counterclockwise' }),
+
+          Bindery.FullBleedSpread({ selector: '.spread', continue: 'same' }),
+          Bindery.FullBleedSpread({ selector: '.tall-clockwise', continue: 'same', rotate: 'clockwise' }),
+          Bindery.FullBleedSpread({ selector: '.tall-counterclockwise', continue: 'same', rotate: 'counterclockwise' }),
+        ],
+      });
+
+  </script>
+
+  <script type="text/javascript" src='/js/viewSourceButton.js'></script>
+</body>
+</html>
