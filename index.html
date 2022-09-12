@@ -10,44 +10,69 @@
 </head>
 
 <body>
+
+  <div id="zoom_ui">
+    Zoom in/out 
+    <input type="range" min="0.1" max="2.0" step="0.1" value="1" class="slider" id="zoom_level">
+  </div>
+
   <script>
-      Bindery.makeBook({
-        content: {
-          url: './content.html',
-          selector: ".content",
-        },
-        pageSetup: {
-          size: { width: '105mm', height: '149mm' },
-          // size: { width: '4.125in', height: '5.875in' },
-        },
-        printSetup: {
-          // bleed: '0.25in',
-          bleed: '0mm',
-        },
-        rules: [
-          Bindery.RunningHeader(),
-          // Bindery.PageBreak({ selector: '.break', position: 'before', continue: 'right' }),
-          // Bindery.PageBreak({ selector: 'ul', position: 'after' }),
-          Bindery.PageBreak({ selector: 'h1, h2', position: 'before', continue: 'right' }),
-          // was Bindery.PageBreak({ selector: 'h1, h2', position: 'before', continue: 'left' }),
-          Bindery.PageBreak({ selector: '.tootall', position: 'avoid' }),
-          Bindery.PageBreak({ selector: '.regular', position: 'avoid' }),
-          
 
-          Bindery.FullBleedPage({ selector: '.fullpage', continue: 'next' }),
-          Bindery.FullBleedPage({ selector: '.inward', continue: 'next', rotate: 'inward' }),
-          Bindery.FullBleedPage({ selector: '.outward', continue: 'next', rotate: 'outward' }),
-          Bindery.FullBleedPage({ selector: '.full-clockwise', continue: 'next', rotate: 'clockwise' }),
-          Bindery.FullBleedPage({ selector: '.full-counterclockwise', continue: 'next', rotate: 'counterclockwise' }),
+    // dynamic size...
+    let page_height = window.innerHeight * .5;
+    let page_width = page_height * 1.41;
 
-          Bindery.FullBleedSpread({ selector: '.spread', continue: 'same' }),
-          Bindery.FullBleedSpread({ selector: '.tall-clockwise', continue: 'same', rotate: 'clockwise' }),
-          Bindery.FullBleedSpread({ selector: '.tall-counterclockwise', continue: 'same', rotate: 'counterclockwise' }),
-        ],
-      });
+    
+    Bindery.makeBook({
+      content: {
+        url: './content.html',
+        selector: ".content",
+      },
+      pageSetup: {
+        // size: { width: '105mm', height: '149mm' },
+        // size: { width: '210mm', height: '297mm' },  // full size A4 pages
+        size: { width: page_height + 'px', height: page_width + 'px' },
+        // size: { width: '4.125in', height: '5.875in' },
+      },
+      printSetup: {
+        // bleed: '0.25in',
+        bleed: '0mm',
+      },
+      rules: [
+        Bindery.RunningHeader(),
+        // Bindery.PageBreak({ selector: '.break', position: 'before', continue: 'right' }),
+        // Bindery.PageBreak({ selector: 'ul', position: 'after' }),
+        Bindery.PageBreak({ selector: 'h1, h2', position: 'before', continue: 'right' }),
+        // was Bindery.PageBreak({ selector: 'h1, h2', position: 'before', continue: 'left' }),
+        Bindery.PageBreak({ selector: '.tootall', position: 'avoid' }),
+        Bindery.PageBreak({ selector: '.regular', position: 'avoid' }),
+
+
+        Bindery.FullBleedPage({ selector: '.fullpage', continue: 'next' }),
+        Bindery.FullBleedPage({ selector: '.inward', continue: 'next', rotate: 'inward' }),
+        Bindery.FullBleedPage({ selector: '.outward', continue: 'next', rotate: 'outward' }),
+        Bindery.FullBleedPage({ selector: '.full-clockwise', continue: 'next', rotate: 'clockwise' }),
+        Bindery.FullBleedPage({ selector: '.full-counterclockwise', continue: 'next', rotate: 'counterclockwise' }),
+
+        Bindery.FullBleedSpread({ selector: '.spread', continue: 'same' }),
+        Bindery.FullBleedSpread({ selector: '.tall-clockwise', continue: 'same', rotate: 'clockwise' }),
+        Bindery.FullBleedSpread({ selector: '.tall-counterclockwise', continue: 'same', rotate: 'counterclockwise' }),
+      ],
+    });
+
+    // upon init, set the zoom_level
+    
+      document.getElementById("zoom_level").oninput = function () {
+
+        let scale_me = document.getElementsByClassName("📖-zoom-scaler")[0];
+        let new_scale = document.getElementById("zoom_level").value;
+        scale_me.style.setProperty('zoom', new_scale);
+
+      }
 
   </script>
 
   <script type="text/javascript" src='/js/viewSourceButton.js'></script>
 </body>
+
 </html>
