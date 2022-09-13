@@ -14,14 +14,33 @@ body {
 
 }
 
-h1 {
-    font-size: 3rem;
+a {
+    text-decoration: underline;
+    color: #223344;
 }
 
-h2 {
+h1 {
+    font-family: 'Merriweather', serif;
     font-size: 2rem;
     line-height: 2.4rem;
     margin-bottom: 2.4rem;  /* was 4.8 */
+}
+
+h2 {
+    font-family: 'Merriweather', serif;
+    font-size: 1.6rem;
+    margin-bottom: 1.6rem;
+    color:#444;
+    border-left: 3px #444 solid;
+    padding-left:1rem;
+    font-style: italic;
+    
+}
+
+p {
+    text-indent: 1rem;
+    margin-bottom:1rem;
+    /* font-size:.75rem; */
 }
 
 ul {
@@ -36,11 +55,6 @@ sup {
     margin: 20px auto;
     max-width: 900px;
     padding: 20px;
-}
-
-p {
-    text-indent: 1rem;
-    /* font-size:.75rem; */
 }
 
 figure {
