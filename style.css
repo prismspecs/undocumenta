@@ -5,11 +5,13 @@
 }
 
 :root {
-    font: 20px/1.2 serif;
+    font: 18px serif;
 }
 
 body {
     margin: 0;
+    font-family: 'Lato', sans-serif;
+
 }
 
 h1 {
