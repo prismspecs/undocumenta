@@ -45,7 +45,15 @@ p {
 
 ul {
     margin-left:2.4rem;
+    list-style: none;
 }
+li {
+    margin-bottom:1rem;
+}
+li::before {
+    content: '🔥';
+    /* position: absolute; */
+  }
 
 sup {
     font-size: 0.7rem;

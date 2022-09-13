@@ -72,6 +72,7 @@
     document.getElementById("zoom_level").oninput = function () {
 
       let scale_me = document.getElementsByClassName("📖-zoom-scaler")[0];
+      console.log(scale_me);
       let new_scale = document.getElementById("zoom_level").value;
       scale_me.style.setProperty('zoom', new_scale);
 
