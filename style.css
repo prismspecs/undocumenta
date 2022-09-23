@@ -23,43 +23,47 @@ h1 {
     font-family: 'Merriweather', serif;
     font-size: 2rem;
     line-height: 2.4rem;
-    margin-bottom: 2.4rem;  /* was 4.8 */
+    margin-bottom: 2.4rem;
+    /* was 4.8 */
 }
 
 h2 {
     font-family: 'Merriweather', serif;
     font-size: 1.6rem;
     margin-bottom: 1.6rem;
-    color:#444;
+    color: #444;
     border-left: 3px #444 solid;
-    padding-left:1rem;
+    padding-left: 1rem;
     font-style: italic;
-    
+
 }
 
 p {
     text-indent: 1rem;
-    margin-bottom:1rem;
+    margin-bottom: 1rem;
     /* font-size:.75rem; */
 }
 
 ul {
-    margin-left:2.4rem;
+    margin-left: 2.4rem;
     /* list-style: none; */
 }
+
 li {
-    margin-bottom:1rem;
+    margin-bottom: 1rem;
 }
+
 li::before {
     /* content: '🔥'; */
     /* position: absolute; */
-  }
+}
 
 sup {
     font-size: 0.7rem;
 }
 
-.content, .intro {
+.content,
+.intro {
     margin: 20px auto;
     max-width: 900px;
     padding: 20px;
@@ -113,8 +117,14 @@ figcaption {
 }
 
 .regular {
-    height:unset;
+    height: unset;
 }
+
 .italic {
     font-style: italic;
+}
+
+.📖-zoom-scaler {
+    transform-origin: center top !important;
+
 }
