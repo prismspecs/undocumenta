@@ -30,6 +30,7 @@
     --bindery-margin-outer: 15pt !important;
     --bindery-ui-bg: #9cc5d4 !important;
 
+
 }
 
 body {
@@ -47,15 +48,14 @@ a {
 h1 {
     font-family: 'ark-es-dense', serif;
     font-size: 3vw;
-    line-height: 2.4rem;
-    color: #5c0cf4;
+    line-height: 3rem;
+    color: #7734f4;
   
     border-radius: 1em;
     padding: 0.5em;
     -webkit-text-stroke-width: 0.5px;
     -webkit-text-stroke-color: black;
-      text-shadow: 3px 0 black;
-    /* filter: drop-shadow(2px 2px 0.15rem green); */
+      text-shadow: 2px 0 black;
     /* margin-top: 0.5em; */
 }
 
@@ -72,11 +72,6 @@ h2 {
 }
 
 
-.📖-page-background{
-  
-   
-  
-}
 
 .📖-left{
     background: #f3f6d8 ;
@@ -112,8 +107,6 @@ ul {
     border-radius: 20px;
     padding: 0.75em;
 
-
-    /* list-style: none; */
 }
 
 li {
@@ -224,25 +217,12 @@ margin-left: 0.75em;
 }
 .flexy{
     height: calc(var(--bindery-page-height) - 5em);
-    /* width: var(--bindery-page-width); */
-  
-
-    /* position: relative; */
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    background-image: url("./images/squiggle-colorway.png");
-    object-fit:cover;
+    /* background: url("./images/squiggle-colorway.png");
+    object-fit:cover; */
 
-}
-.column-grid{
-    margin-left: 0.5em;
-display: grid;
-grid-template-columns: repeat(2, 1fr);
-grid-template-rows: repeat(2, 1fr);
-    /* grid-column: 1 / span 1;
-    grid-row: 2 / span 2; */
-   
 }
 
 .ps-grid{
@@ -253,9 +233,7 @@ grid-template-rows: repeat(2, 1fr);
 .ps-grid p {
     padding: 0.75em;
 }
-.wider{
-    grid-column: 1 / span 2;
-}
+
 .ps{
 
     font-family: 'ark-es-dense', serif;
@@ -284,3 +262,31 @@ grid-template-rows: repeat(2, 1fr);
     margin-left: 10em;
 }
 
+
+
+@media screen and (max-width: 1280px ) {
+   .column{
+    width: 20vw;
+    font-size: 1em;
+   }
+   h1{
+    font-size: 3em;
+   }
+   .ps{
+    font-size: 2em;
+   }
+
+}
+
+@media screen and (max-width: 500px){
+    .column{
+        width: 75vw;
+        font-size: 1.5em;
+      
+       }
+       .offset{
+
+        width: 70vw;
+
+       }
+}

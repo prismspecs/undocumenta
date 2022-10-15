@@ -27,6 +27,22 @@
     let page_height = window.innerHeight * .5;
     let page_width = page_height * 1.41;
 
+    const mediaQuery = window.matchMedia('(max-width: 1280px)');
+    function smallerScreenSize(screen){
+      if (screen.matches){
+        console.log(window.innerWidth, window.innerHeight)
+        console.log('matches')
+         page_height = window.innerHeight * .65;
+         page_width = page_height * 1.5;
+      
+      }
+
+    }
+
+    mediaQuery.addListener(smallerScreenSize)
+
+// Initial check
+smallerScreenSize(mediaQuery)
 
     Bindery.makeBook({
       content: {
