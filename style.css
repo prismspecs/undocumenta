@@ -45,7 +45,7 @@ a {
     color: #223344;
 }
 
-h1 {
+h1, h5 {
     font-family: 'ark-es-dense', serif;
     /* font-size: 3rem; */
     font-size: clamp(2.5rem, 2vw + 1rem, 3.5vw);
@@ -73,7 +73,9 @@ h2 {
 }
 
 
-
+.📖-spread-centered {
+    margin: 32px auto !important;
+}
 .📖-left{
     background: #f3f6d8 ;
     background: linear-gradient(90deg, rgb(243,246,216) 89%, rgba(180,238,18,1) 94%, rgba(76,67,226,1) 98%) !important; 
