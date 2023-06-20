@@ -58,12 +58,12 @@ ul {
 }
 
 .image-overlay {
-    position:fixed;
-    left:25%;
-    top:25%;
-    width:50%;
-    height:50%;
-    pointer-events:none;
+    position: fixed;
+    left: 25%;
+    top: 25%;
+    width: 50%;
+    height: 50%;
+    pointer-events: none;
     background-size: contain;
     background-position: center center;
 }
@@ -98,12 +98,15 @@ ul {
 .s {
     flex-basis: 40%;
 }
+
 .m {
     flex-basis: 50%;
 }
+
 .l {
     flex-basis: 60%;
 }
+
 .f {
     flex-basis: 100%;
 }
@@ -138,6 +141,19 @@ ul {
 
 .mobile-only {
     display: none;
+}
+
+.video-container {
+    position: relative;
+    padding-bottom: 56.25%;
+}
+
+.video-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
 }
 
 @media (max-width: 900px) {
