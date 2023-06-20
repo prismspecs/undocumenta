@@ -1,0 +1,186 @@
+/* reset all CSS properties */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: 'Maison Neue Book';
+    src: url('fonts/MaisonNeue-Book.woff2') format('woff2'),
+        url('fonts/MaisonNeue-Book.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Reckless';
+    src: url('fonts/Reckless-Regular.woff2') format('woff2'),
+        url('fonts/Reckless-Regular.woff') format('woff'),
+        url('fonts/Reckless-Regular.eot') format('eot');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Reckless';
+    src: url('fonts/Reckless-RegularItalic.woff2') format('woff2'),
+        url('fonts/Reckless-RegularItalic.woff') format('woff'),
+        url('fonts/Reckless-RegularItalic.eot') format('eot');
+    font-weight: 500;
+    font-style: italic;
+    font-display: swap;
+}
+
+
+
+body {
+    font-family: 'Maison Neue Book';
+    font-size: 14px;
+    hyphens: auto;
+}
+
+a {
+    text-decoration: underline;
+    color: #000;
+}
+
+a:hover {
+    background-color: #ff0;
+}
+.call-hover:hover {
+    background-color: unset;
+}
+
+ul {
+    list-style: none;
+}
+
+li {
+    margin-bottom: 1rem;
+}
+
+h1,
+h2 {
+    margin-bottom: 2.5rem;
+    font-weight: 500;
+    font-size: 1.6em;
+}
+
+h2 {
+    margin-bottom: 2rem;
+}
+
+p {
+    margin-bottom: 2rem;
+    text-align: justify;
+}
+
+.image-overlay,
+.image-overlay img {
+    pointer-events: none;
+}
+
+.image-overlay img {
+    pointer-events: none;
+    width: 50%;
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.image-overlay {
+    position: fixed;
+    text-align: center;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    padding: 1rem;
+}
+
+/* logo svg fixed to top left of page */
+
+.logo {
+    position: fixed;
+    bottom: 0;
+    right: -20px;
+    width: 150px;
+    height: 150px;
+    padding: 10px;
+}
+
+/* content container */
+.container {
+    margin: 4rem auto;
+    width: 100%;
+    max-width: 1300px;
+    padding: 0 50px;
+}
+
+.row {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+    margin-top: 2rem;
+}
+
+.extra-margin {
+    margin-top: 6rem;
+}
+
+.column {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+.left {
+    flex-basis: 60%;
+    padding-right: 2em;
+}
+
+.right {
+    flex-basis: 40%;
+}
+
+.residents h2 a {
+    text-decoration: none;
+}
+
+/* .interviews ul li {
+    font-family: Reckless;
+    font-style: italic;
+} */
+
+.italic {
+    font-style: italic;
+}
+
+.footer p {
+    margin-bottom: .5em;
+}
+
+.mobile-only {
+    display: none;
+}
+
+@media (max-width: 900px) {
+    .row {
+        flex-direction: column;
+    }
+
+    .logo {
+        position: absolute;
+        padding: 0px;
+    }
+    .desktop-only {
+        display: none;
+    }
+    .mobile-only {
+        display: unset;
+    }
+}

@@ -1,151 +1,179 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>undocumentation</title>
-  <link rel="stylesheet" type="text/css" href="style.css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Undocumenta</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,400;0,700;1,400&display=swap"
+        rel="stylesheet">
 
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Lato&family=Merriweather:wght@400;700&display=swap"
-    rel="stylesheet">
-
-  <script type="text/javascript" src='bindery.min.js'></script>
+    <link rel="stylesheet" href="style.css">
+    <script src="main.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
+    <div class="container">
+        <!-- <img src="images/logo.svg" alt="logo" class="logo"> -->
+        <!-- <div class="image-overlay"></div> -->
+        <h1>
+            Undocumenta
+        </h1>
+        <p>
+            Activated by ruangrupa’s invocation for Documenta 15, <span class="italic">lumbung</span>, which translates
+            from
+            Indonesian to a "communal rice barn", we sought to extend the narrative theme of collective sharing and
+            nourishment to the public. Our goal was to cultivate a community of artists from varied
+            lived experiences and cultural contexts, to provide a platform for their stories to be shared with the
+            audiences
+            of Documenta in Kassel, Germany.
+        </p>
 
-  <div id="zoom_ui" style="margin: 12px; margin-top:8px;">
-    <label for="zoom_level">zoom in/out</label>
-    <input autocomplete="off" type="range" min="0.1" max="2.0" step="0.1" value="1" class="slider" id="zoom_level" style="transform:translate(0,6px)">
-  </div>
-
-  <script>
-    // dynamic size...
-    let page_height = window.innerHeight * .5;
-    let page_width = page_height * 1.41;
-
-    const mediaQuery = window.matchMedia('(max-width: 1280px)');
-    function smallerScreenSize(screen){
-      if (screen.matches){
-        console.log(window.innerWidth, window.innerHeight)
-        console.log('matches')
-         page_height = window.innerHeight * .65;
-         page_width = page_height * 1.5;
-      
-      }
-
-    }
-
-    mediaQuery.addListener(smallerScreenSize)
-
-// Initial check
-smallerScreenSize(mediaQuery)
-
-    Bindery.makeBook({
-      content: {
-        url: './content.html',
-        selector: ".content",
-      },
-      pageSetup: {
-        // size: { width: '105mm', height: '149mm' },
-        // size: { width: '210mm', height: '297mm' },  // full size A4 pages
-        size: {
-          width: page_height + 'px',
-          height: page_width + 'px'
-        },
-        // size: { width: '4.125in', height: '5.875in' },
-      },
-      printSetup: {
-        // bleed: '0.25in',
-        bleed: '0mm',
-        // paper: Bindery.Paper.A4_PORTRAIT,
-      },
-      rules: [
-        Bindery.RunningHeader(),
-        // Bindery.PageBreak({ selector: '.break', position: 'before', continue: 'right' }),
-        // Bindery.PageBreak({ selector: 'ul', position: 'after' }),
-        Bindery.PageBreak({
-          selector: 'h1, h2',
-          position: 'before',
-          continue: 'right'
-        }),
-        // was Bindery.PageBreak({ selector: 'h1, h2', position: 'before', continue: 'left' }),
-        Bindery.PageBreak({
-          selector: '.tootall',
-          position: 'avoid'
-        }),
-        Bindery.PageBreak({
-          selector: '.regular',
-          position: 'avoid'
-        }),
+        <p>
+            We asked for submissions which engage critically with immigration and the global refugee
+            crisis: from those traveling north from Central and South America, to citizens from Ukraine seeking refuge
+            from
+            the recent Russian invasion, to those relocating to Europe from the Middle East and North Africa, and
+            beyond. We
+            encouraged submissions from people affected by these situations, as well as those who work in solidarity
+            with
+            marginalized peoples of the world.
+        </p>
 
 
-        Bindery.FullBleedPage({
-          selector: '.fullpage',
-          continue: 'next'
-        }),
-        Bindery.FullBleedPage({
-          selector: '.inward',
-          continue: 'next',
-          rotate: 'inward'
-        }),
-        Bindery.FullBleedPage({
-          selector: '.outward',
-          continue: 'next',
-          rotate: 'outward'
-        }),
-        Bindery.FullBleedPage({
-          selector: '.full-clockwise',
-          continue: 'next',
-          rotate: 'clockwise'
-        }),
-        Bindery.FullBleedPage({
-          selector: '.full-counterclockwise',
-          continue: 'next',
-          rotate: 'counterclockwise'
-        }),
 
-        Bindery.FullBleedSpread({
-          selector: '.spread',
-          continue: 'same'
-        }),
-        Bindery.FullBleedSpread({
-          selector: '.tall-clockwise',
-          continue: 'same',
-          rotate: 'clockwise'
-        }),
-        Bindery.FullBleedSpread({
-          selector: '.tall-counterclockwise',
-          continue: 'same',
-          rotate: 'counterclockwise'
-        }),
-      ],
-    });
+        <div class="toc">
+            <div class="header-wrap">
+                <h1>
+                    Table of Contents
+                </h1>
+            </div>
+            <ul class="toc">
+                <li>
+                    <a href="#introduction">Introduction</a>
+                </li>
+                <li>
+                    <a href="#alejandra">Alejandra Abad</a>
+                </li>
+                <li>
+                    <a href="#ruthie">Ruthie Abel</a>
+                </li>
+                <li>
+                    <a href="#rose">Rose Ansari</a>
+                </li>
+                <li>
+                    <a href="#lotte">Lotte Marie Allen & Barbara Westermann</a>
+                </li>
+                <li>
+                    <a href="#gal">Gal Amiram</a>
+                </li>
+                <li>
+                    <a href="#leman">Leman Sevda Darıcıoğlu</a>
+                </li>
+                <li>
+                    <a href="#misra">Misra Delfin-Walker</a>
+                </li>
+                <li>
+                    <a href="#maryam">Maryam Faridani</a>
+                </li>
+                <li>
+                    <a href="#matthew">Matthew Flores</a>
+                </li>
+                <li>
+                    <a href="#juan">Juan Hernandez</a>
+                </li>
+                <li>
+                    <a href="#maiia">Maiia Lysytska</a>
+                </li>
+                <li>
+                    <a href="#frankie">Frankie Riot</a>
+                </li>
+                <li>
+                    <a href="#santiago">Santiago Tamayo Soler</a>
+                </li>
+
+                <li>
+                    <a href="#outro">About Undocumenta</a>
+                </li>
+            </ul>
+        </div>
 
 
-    // upon init, set the zoom_level
-    document.getElementById("zoom_level").oninput = function () {
 
-      let scale_me = document.getElementsByClassName("📖-zoom-scaler")[0];
-      let new_scale = document.getElementById("zoom_level").value;
-      // scale_me.style.setProperty('zoom', new_scale);
-      scale_me.style.transform = 'scale(' + new_scale + ',' + new_scale + ')'; // or any x and y value
-    }
+        <!-- <div class="row extra-margin">
+            <div class="column left">
+                <h2 class="desktop-only">Artists</h2>
+                <h2 class="mobile-only">Artists & Works</h2>
+            </div>
+            <div class="column right interviews">
+                <h2 class="desktop-only">Works</h2>
+            </div>
+        </div> -->
 
 
-    document.addEventListener("DOMContentLoaded", function () {
-      var element = document.getElementById("bindery-choose-view");
-      var text = document.createTextNode("Tutorix is the best e-learning platform");
-      element.appendChild(text);
 
-      // console.log(element);
-      // element.innerHTML += "test";
-    });
-  </script>
 
+        <!-- -->
+        <div class="row extra-margin">
+            <div class="column left">
+                <h2 id="alejandra">
+                    Alejandra Abad
+                </h2>
+            </div>
+            <div class="column right">
+                Born in Caracas, Venezuela, Alejandra Abad is an interdisciplinary visual artist who explores belonging
+                and
+                mutual
+                compassion as a key part of collective wellness. Through layering, abstraction, and light, she creates
+                fantastical
+                landscapes that relate to place, family, and community.
+            </div>
+        </div>
+
+        <div class="row">
+            <img src="photos/alejandra_abad-pais_olvidado_3.jpg" />
+        </div>
+
+        <div class="row">
+            <div class="column left">
+
+            </div>
+            <div class="column right quote">
+                "This video is a segment from a series of vignettes of interviews I conducted with
+                displaced Venezuelans during the pandemic. For instance, the dialogue below comes from a displaced Venezuelan
+                mother who had to cross the Arauca River, which is a natural border between Venezuela and Colombia. She
+                crossed with her daughter to find opportunities in Colombia in order to provide for her daughter." 
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="column left">
+                <p>Left column</p>
+
+            </div>
+            <div class="column right">
+                Right column
+            </div>
+        </div>
+
+
+
+        <div class="row">
+            <div class="column footer">
+                <p>© Undocumenta</p>
+
+
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
+</body>
+
+</html>
 </body>
 
 </html>
