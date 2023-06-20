@@ -7,7 +7,7 @@
 
 body {
     font-family: 'Work Sans', sans-serif;
-    font-size: 17px;
+    font-size: 16px;
     hyphens: auto;
     background-color: #111;
     color: #ddd;
@@ -57,11 +57,22 @@ ul {
     padding: 10px;
 }
 
+.image-overlay {
+    position:fixed;
+    left:25%;
+    top:25%;
+    width:50%;
+    height:50%;
+    pointer-events:none;
+    background-size: contain;
+    background-position: center center;
+}
+
 /* content container */
 .container {
     margin: 4rem auto;
     width: 100%;
-    max-width: 1300px;
+    max-width: 1200px;
     padding: 0 50px;
 }
 
@@ -81,6 +92,20 @@ ul {
     display: flex;
     flex-direction: column;
     flex: 1;
+    padding: 0 1em;
+}
+
+.s {
+    flex-basis: 40%;
+}
+.m {
+    flex-basis: 50%;
+}
+.l {
+    flex-basis: 60%;
+}
+.f {
+    flex-basis: 100%;
 }
 
 .left {
