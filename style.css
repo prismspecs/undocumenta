@@ -130,7 +130,6 @@ ul {
     background: #222;
 }
 
-
 .italic {
     font-style: italic;
 }
@@ -172,5 +171,9 @@ ul {
 
     .mobile-only {
         display: unset;
+    }
+
+    .container {
+        margin: .5em auto;
     }
 }
