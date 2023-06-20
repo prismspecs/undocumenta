@@ -175,5 +175,6 @@ ul {
 
     .container {
         margin: .5em auto;
+        padding:.5em;
     }
 }
