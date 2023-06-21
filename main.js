@@ -22,5 +22,39 @@ document.addEventListener('DOMContentLoaded', function () {
         link.appendChild(img);
     });
 
+    var siteTitle = document.querySelector('#site-title');
+    // set navigation div padding-left to container
+    var navigation = document.querySelector('.nav');
+    navigation.style.paddingLeft = siteTitle.offsetLeft + 'px';
+    
 
+    // add event listener for when .nav is clicked, scroll to #navigation
+    navigation.addEventListener('click', function () {
+        var toc = document.querySelector('#navigation');
+
+        // get top position of toc
+        var offsetPosition = toc.offsetTop - 20;
+
+        window.scrollTo({
+            top: offsetPosition,
+            behavior: 'smooth'
+        });
+    }
+    );
+
+
+});
+
+// when scroll past div with navigation class, add class "sticky" to nav
+window.addEventListener('scroll', function () {
+    
+    var nav = document.querySelector('.nav');
+        var navigation = document.querySelector('#navigation');
+        var navigationOffsetTop = navigation.offsetTop;
+
+        if (window.scrollY > navigationOffsetTop) {
+          nav.classList.add('show');
+        } else {
+          nav.classList.remove('show');
+        }
 });

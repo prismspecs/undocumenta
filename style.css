@@ -155,6 +155,49 @@ ul {
     height: 100%;
 }
 
+
+
+.nav {
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    z-index:1;
+    background-color: #222;
+    display:none;
+    padding-top:1em;
+    padding-bottom:1em;
+}
+.show {
+    display:block;
+}
+
+.sticky {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1;
+}
+.sticky ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1em;
+    background-color: #222;
+    border-bottom: 1px solid #333;
+}
+.sticky.row {
+    margin-top:0px;
+}
+.sticky .column {
+    padding: 0;
+}
+
+
+
+
 @media (max-width: 900px) {
     .row {
         flex-direction: column;
